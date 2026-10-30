@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cómo modificar la página · CIS Tuc</title>
+<style>
+:root{--bg:#F6F9F7;--card:#FFFFFF;--ink:#34443D;--muted:#5F7068;--sage:#4E7E6B;--soft:#E8F0EB;--line:#D6E3DB;--code:#1F2E28;--warn:#FFF4E0}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 "Segoe UI",system-ui,sans-serif}
+main{max-width:780px;margin:0 auto;padding:40px 20px 80px}
+h1{font-size:2rem;line-height:1.15;margin:0 0 6px}
+h2{font-size:1.35rem;margin:48px 0 10px;padding-top:22px;border-top:1px solid var(--line)}
+h3{font-size:1.05rem;margin:26px 0 6px}
+.sub{color:var(--muted);margin:0 0 24px}
+ol,ul{padding-left:22px}li{margin:6px 0}
+pre{background:var(--code);color:#E6F0EB;padding:14px 18px;border-radius:10px;overflow-x:auto;font:14.5px/1.55 Consolas,monospace;margin:10px 0}
+code{font-family:Consolas,monospace;background:var(--soft);padding:1px 6px;border-radius:5px;font-size:.92em}
+pre code{background:none;padding:0}
+.box{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin:16px 0}
+.warn{background:var(--warn);border-color:#E9C98F}
+.idx{display:grid;gap:6px}
+.idx a{color:var(--sage);font-weight:600}
+table{border-collapse:collapse;width:100%;font-size:.95rem;margin:10px 0}td,th{border-bottom:1px solid var(--line);padding:9px 6px;text-align:left;vertical-align:top}
+th{color:var(--muted);font-weight:600}
+.ok{color:#2E7D4F;font-weight:600}.bad{color:#B4513F;font-weight:600}
+.file{display:inline-block;background:var(--sage);color:#fff;border-radius:6px;padding:1px 8px;font-family:Consolas,monospace;font-size:.9em}
+</style>
+</head>
+<body>
+<main>
+<h1>Cómo modificar la página de CIS Tuc</h1>
+<p class="sub">Guía paso a paso. No hace falta saber programar: solo se cambian textos entre comillas.</p>
+
+<div class="box idx">
+  <b>¿Qué querés cambiar?</b>
+  <a href="#base">0. Lo básico: cómo abrir, editar y ver los cambios</a>
+  <a href="#pro">1. Profesionales (foto, descripción, horarios, WhatsApp)</a>
+  <a href="#alq">2. Alquiler (precios, modalidades, qué incluye)</a>
+  <a href="#gen">3. WhatsApp de recepción, Instagram, dirección y mensajes</a>
+  <a href="#video">4. Video de la portada</a>
+  <a href="#err">5. Si algo se rompió</a>
+  <a href="#pub">6. Publicar los cambios en internet</a>
+</div>
+
+<h2 id="base">0. Lo básico</h2>
+<p>Todo está en la carpeta <b>Documentos → Repo → CIS-Tuc-web</b>:</p>
+<table>
+<tr><th>Carpeta o archivo</th><th>Para qué sirve</th></tr>
+<tr><td><code>index.html</code></td><td>La página. Doble clic para verla en el navegador. <b>No hace falta tocarlo.</b></td></tr>
+<tr><td><code>datos/profesionales.js</code></td><td>Los profesionales.</td></tr>
+<tr><td><code>datos/alquiler.js</code></td><td>Precios y modalidades de alquiler.</td></tr>
+<tr><td><code>datos/configuracion.js</code></td><td>WhatsApp de recepción, Instagram, dirección, video.</td></tr>
+<tr><td><code>fotos/</code></td><td>Fotos de perfil de los profesionales.</td></tr>
+<tr><td><code>img/</code></td><td>Fotos del lugar y video de portada.</td></tr>
+</table>
+
+<h3>Cómo editar un archivo (siempre igual)</h3>
+<ol>
+  <li>Entrá a la carpeta <code>datos</code>.</li>
+  <li>Clic derecho sobre el archivo → <b>Abrir con</b> → <b>Bloc de notas</b>.</li>
+  <li>Cambiá <b>solo lo que está entre comillas</b> <code>"así"</code>.</li>
+  <li>Guardá con <b>Ctrl + G</b> (o Ctrl + S) y cerrá.</li>
+  <li>Abrí <code>index.html</code> (o apretá <b>F5</b> si ya estaba abierta) para ver cómo quedó.</li>
+</ol>
+<div class="box">Regla de oro: <b>no borres comas, comillas, llaves { } ni corchetes [ ]</b>. Si te equivocás, <b>Ctrl + Z</b> deshace.</div>
+
+<h2 id="pro">1. Profesionales <span class="file">datos/profesionales.js</span></h2>
+<p>Cada profesional es un bloque como este:</p>
+<pre><code>{
+  nombre: "Lic. Laura Gómez",
+  especialidad: "Psicología",
+  descripcion: "Psicóloga clínica. Terapia para adultos y adolescentes.",
+  foto: "fotos/laura-gomez.jpg",
+  horarios: ["Lunes 9:00 a 13:00", "Miércoles 15:00 a 19:00"],
+  whatsapp: "381 555 1234",
+  mostrar: true
+},</code></pre>
+
+<h3>Cambiar la foto de perfil</h3>
+<ol>
+  <li>Usá una foto <b>cuadrada</b>, de la cara al pecho, con buena luz.</li>
+  <li>Ponele un nombre simple: minúsculas, sin espacios ni tildes. Ej.: <code>laura-gomez.jpg</code></li>
+  <li>Copiala en la carpeta <code>fotos</code>.</li>
+  <li>En su bloque escribí: <code>foto: "fotos/laura-gomez.jpg",</code></li>
+</ol>
+<p>Sin foto: <code>foto: "",</code> → se muestran sus iniciales.</p>
+
+<h3>Cambiar la descripción</h3>
+<pre><code>descripcion: "Nutricionista. Planes personalizados y nutrición deportiva.",</code></pre>
+<p>Que sea corta (1 o 2 líneas). Si necesitás comillas adentro, usá simples: <code>'así'</code>.</p>
+
+<h3>Cambiar los horarios</h3>
+<p>Un día por cada texto entre comillas, separados por coma:</p>
+<pre><code>horarios: ["Lunes 9:00 a 13:00", "Jueves 16:30 a 20:30"],</code></pre>
+<p>Un solo día: <code>horarios: ["Viernes 8:30 a 12:30"],</code></p>
+
+<h3>WhatsApp del profesional (botón “Solicitar turno”)</h3>
+<p>Cuando un paciente toca <b>Solicitar turno</b>, se abre un chat con <b>ese profesional</b> y un mensaje ya escrito. Escribí el número con <b>código de área + número, sin 0 y sin 15</b>:</p>
+<table>
+<tr><td class="ok">Bien</td><td><code>"381 555 1234"</code> &nbsp; <code>"3815551234"</code></td></tr>
+<tr><td class="bad">Mal</td><td><code>"0381 15 555 1234"</code> &nbsp; <code>"15 555 1234"</code></td></tr>
+</table>
+<p>Si lo dejás vacío <code>whatsapp: "",</code> el botón lleva al WhatsApp de recepción.</p>
+
+<h3>Especialidad</h3>
+<p>Escribila siempre igual (con tildes y mayúsculas iguales). Los botones de filtro de la web se arman solos con esto.</p>
+
+<h3>Agregar, quitar u ocultar un profesional</h3>
+<ul>
+  <li><b>Agregar:</b> copiá un bloque entero (desde <code>{</code> hasta <code>},</code>), pegalo justo antes del <code>];</code> del final y cambiá los datos.</li>
+  <li><b>Quitar:</b> borrá su bloque entero.</li>
+  <li><b>Ocultar por un tiempo</b> (vacaciones, licencia): cambiá <code>mostrar: true</code> por <code>mostrar: false</code>.</li>
+</ul>
+
+<h2 id="alq">2. Alquiler <span class="file">datos/alquiler.js</span></h2>
+<h3>Cambiar un precio</h3>
+<p>Buscá la modalidad y cambiá el precio:</p>
+<pre><code>precio: "$75.000",</code></pre>
+<p>Si cambiás el precio del <b>módulo de 4 hs</b>, cambiá también el número de arriba (sin puntos ni $), que se usa para calcular el total:</p>
+<pre><code>precioModulo: 75000,</code></pre>
+
+<h3>Otros cambios</h3>
+<ul>
+  <li><code>detalles</code>: los puntitos debajo del precio.</li>
+  <li><code>nota</code>: texto chico al final (ej. el descuento). Vacío <code>""</code> = no se muestra.</li>
+  <li><code>destacada: true</code>: la tarjeta blanca resaltada. Dejá solo una en <code>true</code>.</li>
+  <li><code>incluye</code>: la lista “Todo lo que necesitás”. Una línea por cosa, entre comillas y con coma.</li>
+</ul>
+<p><b>Ocultar todos los precios:</b> en <code>datos/configuracion.js</code> poné <code>mostrarPrecios: false,</code></p>
+
+<h2 id="gen">3. Datos generales <span class="file">datos/configuracion.js</span></h2>
+<table>
+<tr><th>Qué</th><th>Cómo se ve en el archivo</th></tr>
+<tr><td>WhatsApp de recepción (botón verde flotante y contacto)</td><td><code>whatsappRecepcion: "381 223 5701",</code></td></tr>
+<tr><td>Instagram (sin @)</td><td><code>instagram: "centrocistuc",</code></td></tr>
+<tr><td>Dirección (también abre Google Maps)</td><td><code>direccion: "Laprida 480, San Miguel de Tucumán",</code></td></tr>
+<tr><td>Mostrar u ocultar precios</td><td><code>mostrarPrecios: true,</code> o <code>false,</code></td></tr>
+<tr><td>Mensaje para turnos ({nombre} = nombre del profesional)</td><td><code>mensajeTurno: "Hola {nombre}, ...",</code></td></tr>
+</table>
+
+<h2 id="video">4. Video de la portada</h2>
+<ol>
+  <li>El video tiene que ser <b>.mp4</b>, corto (menos de 1 minuto) y liviano (menos de 20 MB).</li>
+  <li>Ponele un nombre simple, ej.: <code>video-portada.mp4</code>, y copialo en la carpeta <code>img</code>.</li>
+  <li>En <code>datos/configuracion.js</code> escribí: <code>videoPortada: "img/video-portada.mp4",</code></li>
+</ol>
+<p>Se reproduce solo, sin sonido y en bucle. Para volver a la foto: <code>videoPortada: "",</code></p>
+
+<h2 id="err">5. Si algo se rompió</h2>
+<div class="box warn">Cuando abrís <code>index.html</code> en tu computadora y hay un error, aparece arriba una <b>franja amarilla</b> diciendo qué revisar (un WhatsApp mal escrito, una foto que no se encuentra). <b>Los pacientes nunca ven esa franja.</b></div>
+<p>Errores típicos:</p>
+<ul>
+  <li>Falta una coma al final de la línea.</li>
+  <li>Falta una comilla: <code>"Psicología,</code> en vez de <code>"Psicología",</code></li>
+  <li>El nombre de la foto no coincide exacto (mayúsculas, <code>.jpg</code> o <code>.jpeg</code>).</li>
+</ul>
+<p>Si una sección aparece vacía: abrí el archivo y apretá <b>Ctrl + Z</b> varias veces hasta volver a como estaba, guardá y recargá.</p>
+<p>Consejo: antes de cambios grandes, copiá la carpeta <code>datos</code> y pegala en otro lado como respaldo.</p>
+
+<h2 id="pub">6. Publicar los cambios en internet</h2>
+<p>Lo que cambiás acá se ve <b>solo en esta computadora</b>. Para que lo vean los pacientes, la página tiene que estar subida a un hosting (por ejemplo Netlify). Una vez configurado, publicar un cambio es volver a subir la carpeta <code>CIS-Tuc-web</code> completa.</p>
+</main>
+</body>
+</html>

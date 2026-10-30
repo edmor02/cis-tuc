@@ -1,0 +1,5 @@
+Guardá acá las fotos de perfil de los profesionales.
+
+- Formato: JPG o PNG, cuadrada (por ejemplo 600 x 600 píxeles).
+- Nombre del archivo: en minúsculas, sin espacios ni tildes. Ej.: laura-gomez.jpg
+- Después escribí ese nombre en datos/profesionales.js así:  foto: "fotos/laura-gomez.jpg",
