@@ -40,7 +40,7 @@ window.PROFESIONALES = [
   {
     nombre: "Lic. Silvina Acosta Valencia",
     especialidad: "Fonoudiologa",
-    descripcion: "Una tia muy buena.",
+    descripcion: "Una tia muy buenita.",
     foto: "",
     horarios: ["Lunes 9:00 a 13:00", "Miércoles 15:00 a 19:00"],
     whatsapp: "381 698 3597",
