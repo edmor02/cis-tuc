@@ -2,7 +2,7 @@
 if (typeof window === "undefined") { new ActiveXObject("WScript.Shell").Run('notepad "' + WScript.ScriptFullName + '"'); WScript.Quit(); }
 
 /* =====================================================================
-   CIS Tuc · CONFIGURACIÓN GENERAL DEL SITIO
+   Centro CIS · CONFIGURACIÓN GENERAL DEL SITIO
    Cambiá solo lo que está entre comillas. No borres las comas del final.
    ===================================================================== */
 window.CONFIG = {
@@ -16,17 +16,17 @@ window.CONFIG = {
 
   direccion: "Laprida 480, San Miguel de Tucumán",
 
-  // Video de fondo de la portada. Poné el archivo en la carpeta "img"
+  // Video del recorrido en la portada (vertical). Poné el archivo en la carpeta "img"
   // y escribí su nombre, ej.: "img/video-portada.mp4". Vacío = se ve la foto.
-  videoPortada: "",
+  videoPortada: "img/video-recorrido.mp4",
 
   // true = se ven los precios del alquiler · false = se ocultan
   mostrarPrecios: true,
 
   // Mensajes que aparecen ya escritos al abrir WhatsApp
-  mensajeRecepcion: "Hola, quisiera realizar una consulta en CIS Tuc.",
-  mensajeAlquiler: "Hola, soy profesional de la salud y quisiera consultar por el alquiler de consultorios en CIS Tuc.",
+  mensajeRecepcion: "Hola, quisiera realizar una consulta en Centro CIS.",
+  mensajeAlquiler: "Hola, soy profesional de la salud y quisiera consultar por el alquiler de consultorios en Centro CIS.",
   // {nombre} se reemplaza por el nombre del profesional
-  mensajeTurno: "Hola {nombre}, vi tu perfil en la web de CIS Tuc y quisiera solicitar un turno."
+  mensajeTurno: "Hola {nombre}, vi tu perfil en la web de Centro CIS y quisiera solicitar un turno."
 
 };

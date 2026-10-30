@@ -2,7 +2,7 @@
 if (typeof window === "undefined") { new ActiveXObject("WScript.Shell").Run('notepad "' + WScript.ScriptFullName + '"'); WScript.Quit(); }
 
 /* =====================================================================
-   CIS Tuc · ALQUILER DE CONSULTORIOS
+   Centro CIS · ALQUILER DE CONSULTORIOS
    Cambiá solo lo que está entre comillas. No borres comas ni corchetes.
    (Para ocultar todos los precios: datos/configuracion.js → mostrarPrecios: false)
    ===================================================================== */
@@ -17,7 +17,7 @@ window.ALQUILER = {
       nombre: "Módulo de 4 hs semanales",
       precio: "$72.000",
       periodo: "por mes",
-      detalles: ["Lunes a viernes", "Un día fijo por semana", "3 franjas: 8:30–12:30 · 12:30–16:30 · 16:30–20:30"],
+      detalles: ["Lunes a viernes", "Un día fijo por semana", "3 horarios: 8:30–12:30 · 12:30–16:30 · 16:30–20:30"],
       nota: "",
       destacada: true
     },
@@ -41,7 +41,7 @@ window.ALQUILER = {
     },
   ],
 
-  // Franjas de los módulos (las filas de la grilla)
+  // Horarios de los módulos (las filas de la grilla)
   franjas: ["8:30 a 12:30", "12:30 a 16:30", "16:30 a 20:30"],
 
   // Lista "Todo lo que necesitás"
