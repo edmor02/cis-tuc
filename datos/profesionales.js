@@ -2,7 +2,7 @@
 if (typeof window === "undefined") { new ActiveXObject("WScript.Shell").Run('notepad "' + WScript.ScriptFullName + '"'); WScript.Quit(); }
 
 /* =====================================================================
-   CIS Tuc · PROFESIONALES
+   Centro CIS · PROFESIONALES
    ---------------------------------------------------------------------
    Cada profesional es un bloque entre llaves { ... } seguido de una coma.
    Para AGREGAR uno: copiá el MODELO de abajo, pegalo antes del corchete
@@ -18,9 +18,9 @@ if (typeof window === "undefined") { new ActiveXObject("WScript.Shell").Run('not
 
    ------------------------- MODELO PARA COPIAR -------------------------
    {
-     nombre: "Lic. Nombre y Apellido",
-     especialidad: "Fonoudiologa",
-     descripcion: "Una descripcion corta.",
+     nombre: "Lic. Nombre Apellido",
+     especialidad: "Psicología",
+     descripcion: "Una o dos líneas sobre su forma de trabajo.",
      foto: "fotos/nombre-apellido.jpg",
      horarios: ["Lunes 9:00 a 13:00", "Miércoles 15:00 a 19:00"],
      whatsapp: "381 000 0000",
@@ -38,61 +38,151 @@ if (typeof window === "undefined") { new ActiveXObject("WScript.Shell").Run('not
 window.PROFESIONALES = [
 
   {
+    nombre: "Dra. Gabriela Marchese",
+    especialidad: "Homeopatía",
+    descripcion: "Médico homeópata. Diplomatura en obesidad. Reseteo intestinal.",
+    foto: "fotos/gabriela-marchese.jpg",
+    horarios: [],
+    whatsapp: "",
+    mostrar: true
+  },
+
+  {
+    nombre: "Lic. Micaela Castro",
+    especialidad: "Nutrición",
+    descripcion: "Nutricionista · MP1581. Nutrición funcional integrativa. Especialización en nutrición deportiva. Antropometría ISAK 2. Vegetarianos. Asesoría en suplementación.",
+    foto: "fotos/micaela-castro.jpg",
+    horarios: [],
+    whatsapp: "",
+    mostrar: true
+  },
+
+  {
+    nombre: "Lic. Iván Perez",
+    especialidad: "Psicología",
+    descripcion: "Psicólogo · MP3821. Consulta y asesoría psicológica. Psicoterapia de jóvenes y adultos. Psicodiagnóstico.",
+    foto: "fotos/ivan-perez.jpg",
+    horarios: [],
+    whatsapp: "",
+    mostrar: true
+  },
+
+  {
+    nombre: "Lic. Mirian Oscari",
+    especialidad: "Psicología",
+    descripcion: "Psicóloga. Atención a jóvenes y adultos.",
+    foto: "fotos/mirian-oscari.jpg",
+    horarios: [],
+    whatsapp: "",
+    mostrar: true
+  },
+
+  {
+    nombre: "Lic. Nicolás Martin Gómez",
+    especialidad: "Psicología",
+    descripcion: "Psicólogo. Especialista en infanto-juvenil.",
+    foto: "fotos/nicolas-martin-gomez.jpg",
+    horarios: [],
+    whatsapp: "",
+    mostrar: true
+  },
+
+  {
+    nombre: "Lic. Rocío Pacheco",
+    especialidad: "Psicología",
+    descripcion: "Psicóloga · MP4278. Orientación cognitivo conductual. Modalidad online y presencial.",
+    foto: "fotos/rocio-pacheco.jpg",
+    horarios: [],
+    whatsapp: "",
+    mostrar: true
+  },
+
+  {
+    nombre: "Lic. Belén Serrano",
+    especialidad: "Psicología",
+    descripcion: "Psicóloga · MP4278. Turnos virtuales y presenciales. Niños, adolescentes y adultos.",
+    foto: "fotos/belen-serrano.jpg",
+    horarios: [],
+    whatsapp: "",
+    mostrar: true
+  },
+
+  {
+    nombre: "Lic. Lucyla Corbalán",
+    especialidad: "Psicología",
+    descripcion: "Psicóloga · Sexóloga. Sex coach, mediadora. Atención clínica y sexología. Psicoterapia individual. Terapia de pareja. Terapia sexológica.",
+    foto: "fotos/lucyla-corbalan.jpg",
+    horarios: [],
+    whatsapp: "",
+    mostrar: true
+  },
+
+  {
+    nombre: "Lic. Maria Florencia Aragón",
+    especialidad: "Psicología",
+    descripcion: "Psicóloga. Orientación cognitivo conductual. Adolescentes, jóvenes y adultos.",
+    foto: "fotos/maria-florencia-aragon.jpg",
+    horarios: [],
+    whatsapp: "",
+    mostrar: true
+  },
+
+  {
+    nombre: "Lic. Ale Lucila del Carmen",
+    especialidad: "Psicología",
+    descripcion: "Psicóloga · MP2198. Especialista en psicología clínica en niños, adolescentes y adultos. Especialista en salud social y comunitaria.",
+    foto: "fotos/ale-lucila-del-carmen.jpg",
+    horarios: [],
+    whatsapp: "",
+    mostrar: true
+  },
+
+  {
     nombre: "Lic. Silvina Acosta Valencia",
-    especialidad: "Fonoudiologa",
-    descripcion: "Una tia muy buenita.",
-    foto: "",
+    especialidad: "Fonoaudiología",
+    descripcion: "Fonoaudióloga · MP2386. Diplomada en trastornos del neurodesarrollo. Diplomada en T.E.A. Evaluación y tratamiento.",
+    foto: "fotos/silvina-acosta-valencia.jpg",
     horarios: ["Lunes 9:00 a 13:00", "Miércoles 15:00 a 19:00"],
     whatsapp: "381 698 3597",
     mostrar: true
   },
 
   {
-    nombre: "Lic. Martín Ejemplo",
-    especialidad: "Psicología",
-    descripcion: "Atención de adolescentes y orientación vocacional.",
-    foto: "",
-    horarios: ["Martes 16:30 a 20:30", "Jueves 16:30 a 20:30"],
-    whatsapp: "",
-    mostrar: true
-  },
-
-  {
-    nombre: "Lic. Sofía Ejemplo",
-    especialidad: "Nutrición",
-    descripcion: "Nutrición deportiva y educación alimentaria.",
-    foto: "",
-    horarios: ["Martes 8:30 a 12:30", "Viernes 8:30 a 12:30"],
-    whatsapp: "",
-    mostrar: true
-  },
-
-  {
-    nombre: "Lic. Diego Ejemplo",
-    especialidad: "Kinesiología",
-    descripcion: "Rehabilitación traumatológica y deportiva.",
-    foto: "",
-    horarios: ["Lunes 12:30 a 16:30", "Miércoles 12:30 a 16:30", "Viernes 12:30 a 16:30"],
-    whatsapp: "",
-    mostrar: true
-  },
-
-  {
-    nombre: "Lic. Carla Ejemplo",
+    nombre: "Lic. Maria Jose Chasampi",
     especialidad: "Fonoaudiología",
-    descripcion: "Trastornos del lenguaje en niños y terapia de voz.",
-    foto: "",
-    horarios: ["Jueves 8:30 a 12:30"],
+    descripcion: "Fonoaudióloga. Diplomatura en autismo. Lenguaje. Estimulación del lenguaje en edades tempranas.",
+    foto: "fotos/maria-jose-chasampi.jpg",
+    horarios: [],
     whatsapp: "",
     mostrar: true
   },
 
   {
-    nombre: "Dra. Paula Ejemplo",
-    especialidad: "Clínica médica",
-    descripcion: "Clínica médica general y controles de salud.",
-    foto: "",
-    horarios: ["Lunes 16:30 a 20:30", "Jueves 16:30 a 20:30"],
+    nombre: "Giuliana Rossi",
+    especialidad: "Fonoaudiología",
+    descripcion: "Fonoaudióloga.",
+    foto: "fotos/giuliana-rossi.jpg",
+    horarios: [],
+    whatsapp: "",
+    mostrar: true
+  },
+
+  {
+    nombre: "Lic. Julieta Moreyra",
+    especialidad: "Nutrición",
+    descripcion: "Nutricionista.",
+    foto: "fotos/julieta-moreyra.jpg",
+    horarios: [],
+    whatsapp: "",
+    mostrar: true
+  },
+
+  {
+    nombre: "Lic. Cintia Piquard",
+    especialidad: "Fonoaudiología",
+    descripcion: "Fonoaudióloga. Especialista en rehabilitación vestibular y en trastorno del lenguaje en niños.",
+    foto: "fotos/cintia-piquard.jpg",
+    horarios: [],
     whatsapp: "",
     mostrar: true
   },
