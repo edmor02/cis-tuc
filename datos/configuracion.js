@@ -2,7 +2,7 @@
 if (typeof window === "undefined") { new ActiveXObject("WScript.Shell").Run('notepad "' + WScript.ScriptFullName + '"'); WScript.Quit(); }
 
 /* =====================================================================
-   Centro CIS · CONFIGURACIÓN GENERAL DEL SITIO
+   C.I.S. · CONFIGURACIÓN GENERAL DEL SITIO
    Cambiá solo lo que está entre comillas. No borres las comas del final.
    ===================================================================== */
 window.CONFIG = {
@@ -24,9 +24,9 @@ window.CONFIG = {
   mostrarPrecios: true,
 
   // Mensajes que aparecen ya escritos al abrir WhatsApp
-  mensajeRecepcion: "Hola, quisiera realizar una consulta en Centro CIS.",
-  mensajeAlquiler: "Hola, soy profesional de la salud y quisiera consultar por el alquiler de consultorios en Centro CIS.",
+  mensajeRecepcion: "Hola, quisiera realizar una consulta en C.I.S.",
+  mensajeAlquiler: "Hola, soy profesional de la salud y quisiera consultar por el alquiler de consultorios en C.I.S.",
   // {nombre} se reemplaza por el nombre del profesional
-  mensajeTurno: "Hola {nombre}, vi tu perfil en la web de Centro CIS y quisiera solicitar un turno."
+  mensajeTurno: "Hola {nombre}, vi tu perfil en la web de C.I.S. y quisiera solicitar un turno."
 
 };
