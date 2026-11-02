@@ -142,7 +142,7 @@ window.PROFESIONALES = [
     especialidad: "Fonoaudiología",
     descripcion: "Fonoaudióloga · MP2386. Diplomada en trastornos del neurodesarrollo. Diplomada en T.E.A. Evaluación y tratamiento.",
     foto: "fotos/silvina-acosta-valencia.jpg",
-    horarios: ["Lunes 9:00 a 13:00", "Miércoles 15:00 a 19:00"],
+    horarios: [],
     whatsapp: "381 698 3597",
     mostrar: true
   },
