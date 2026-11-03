@@ -422,7 +422,7 @@ dialog::backdrop{background:rgba(18,28,24,.55);backdrop-filter:blur(4px)}
       <h1>Tu consultorio, <em>listo para atender</em></h1>
       <p class="sub">Contamos con 12 consultorios amoblados y equipados con todo lo que necesitás para atender.</p>
       <div class="hero-actions">
-        <a class="btn btn-light" href="#alquiler">Ver modalidades y precios</a>
+        <a class="btn btn-light" href="#alquiler">Ver modalidades</a>
         <a class="btn btn-outline-light" id="heroWa" href="#" target="_blank" rel="noopener">Consultar disponibilidad</a>
       </div>
     </div>
@@ -479,7 +479,7 @@ dialog::backdrop{background:rgba(18,28,24,.55);backdrop-filter:blur(4px)}
         <div class="grid-scroll"><div class="modgrid" id="modgrid" role="group" aria-label="Módulos semanales"></div></div>
         <div class="sel-summary">
           <span id="selText">Ningún módulo elegido</span>
-          <a class="btn btn-light btn-sm" id="selWa" href="#" target="_blank" rel="noopener">Consultar disponibilidad</a>
+          <a class="btn btn-light btn-sm" id="selWa" href="#" target="_blank" rel="noopener">Consultar precio y disponibilidad</a>
         </div>
       </div>
     </div>
@@ -593,7 +593,7 @@ const PRECIO_MODULO = Number(AQ.precioModulo)||0;
 const problemas = [];
 const CFG = Object.assign({
   whatsappRecepcion:"381 223 5701", instagram:"centrocistuc", direccion:"Laprida 480, San Miguel de Tucumán",
-  videoPortada:"", mostrarPrecios:true,
+  videoPortada:"",
   mensajeRecepcion:"Hola, quisiera realizar una consulta en C.I.S.",
   mensajeAlquiler:"Hola, soy profesional de la salud y quisiera consultar por el alquiler de consultorios en C.I.S.",
   mensajeTurno:"Hola {nombre}, vi tu perfil en la web de C.I.S. y quisiera solicitar un turno."
@@ -671,11 +671,10 @@ function renderRent(){
     <article class="plan${p.feat?" feat":""}">
       <span class="tag">${esc(p.tag)}</span>
       <h3>${esc(p.nombre)}</h3>
-      ${CFG.mostrarPrecios ? `<div class="price">${esc(p.precio)}<small>${esc(p.periodo)}</small></div>` : ""}
       <ul>${p.items.map(i=>`<li>${esc(i)}</li>`).join("")}</ul>
       ${p.note?`<p class="note">${esc(p.note)}</p>`:""}
       <a class="btn ${p.feat?"btn-primary":"btn-ghost"} btn-sm" target="_blank" rel="noopener"
-         href="${wa(`${CFG.mensajeAlquiler} Me interesa la modalidad: ${p.nombre}.`)}">Consultar disponibilidad</a>
+         href="${wa(`${CFG.mensajeAlquiler} Me interesa la modalidad: ${p.nombre}. ¿Me pasan el precio y la disponibilidad?`)}">Consultar precio por WhatsApp</a>
     </article>`).join("");
   const g = $("#modgrid");
   let h = `<span></span>` + DIAS_SEM.map(d=>`<span class="h">${d.slice(0,3)}</span>`).join("");
@@ -690,8 +689,8 @@ function renderRent(){
 }
 function updateSel(){
   const sel = $$(".cell[aria-pressed='true']").map(c=>`${DIAS_SEM[c.dataset.d]} de ${FRANJAS[c.dataset.f]}`), n = sel.length;
-  $("#selText").textContent = n ? `${n} módulo${n>1?"s":""} elegido${n>1?"s":""}${CFG.mostrarPrecios&&PRECIO_MODULO?` · $${(PRECIO_MODULO*n).toLocaleString("es-AR")} por mes`:""}` : "Ningún módulo elegido";
-  $("#selWa").href = wa(n ? `${CFG.mensajeAlquiler} Me interesan estos módulos de 4 hs semanales: ${sel.join("; ")}. ¿Están disponibles?` : `${CFG.mensajeAlquiler} Me interesan los módulos de 4 hs semanales.`);
+  $("#selText").textContent = n ? `${n} módulo${n>1?"s":""} elegido${n>1?"s":""}` : "Ningún módulo elegido";
+  $("#selWa").href = wa(n ? `${CFG.mensajeAlquiler} Me interesan estos módulos de 4 hs semanales: ${sel.join("; ")}. ¿Están disponibles y cuál es el precio?` : `${CFG.mensajeAlquiler} Me interesan los módulos de 4 hs semanales. ¿Me pasan precios y disponibilidad?`);
 }
 
 /* ---------- Profesionales ---------- */

@@ -20,8 +20,7 @@ window.CONFIG = {
   // y escribí su nombre, ej.: "img/video-portada.mp4". Vacío = se ve la foto.
   videoPortada: "img/video-recorrido.mp4",
 
-  // true = se ven los precios del alquiler · false = se ocultan
-  mostrarPrecios: true,
+  // Los precios del alquiler no se muestran en la web: se consultan por WhatsApp.
 
   // Mensajes que aparecen ya escritos al abrir WhatsApp
   mensajeRecepcion: "Hola, quisiera realizar una consulta en C.I.S.",
