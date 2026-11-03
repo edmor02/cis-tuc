@@ -2,7 +2,7 @@
 if (typeof window === "undefined") { new ActiveXObject("WScript.Shell").Run('notepad "' + WScript.ScriptFullName + '"'); WScript.Quit(); }
 
 /* =====================================================================
-   Centro CIS · PROFESIONALES
+   C.I.S. · PROFESIONALES
    ---------------------------------------------------------------------
    Cada profesional es un bloque entre llaves { ... } seguido de una coma.
    Para AGREGAR uno: copiá el MODELO de abajo, pegalo antes del corchete
@@ -22,7 +22,7 @@ if (typeof window === "undefined") { new ActiveXObject("WScript.Shell").Run('not
      especialidad: "Psicología",
      descripcion: "Una o dos líneas sobre su forma de trabajo.",
      foto: "fotos/nombre-apellido.jpg",
-     horarios: [""],
+     horarios: ["Lunes 9:00 a 13:00", "Miércoles 15:00 a 19:00"],
      whatsapp: "381 000 0000",
      mostrar: true
    },
@@ -43,7 +43,7 @@ window.PROFESIONALES = [
     descripcion: "Médico homeópata. Diplomatura en obesidad. Reseteo intestinal.",
     foto: "fotos/gabriela-marchese.jpg",
     horarios: [],
-    whatsapp: "",
+    whatsapp: "381 567 0271",
     mostrar: true
   },
 
@@ -53,7 +53,7 @@ window.PROFESIONALES = [
     descripcion: "Nutricionista · MP1581. Nutrición funcional integrativa. Especialización en nutrición deportiva. Antropometría ISAK 2. Vegetarianos. Asesoría en suplementación.",
     foto: "fotos/micaela-castro.jpg",
     horarios: [],
-    whatsapp: "",
+    whatsapp: "381 240 3660",
     mostrar: true
   },
 
@@ -63,7 +63,7 @@ window.PROFESIONALES = [
     descripcion: "Psicólogo · MP3821. Consulta y asesoría psicológica. Psicoterapia de jóvenes y adultos. Psicodiagnóstico.",
     foto: "fotos/ivan-perez.jpg",
     horarios: [],
-    whatsapp: "",
+    whatsapp: "381 595 8042",
     mostrar: true
   },
 
@@ -73,7 +73,7 @@ window.PROFESIONALES = [
     descripcion: "Psicóloga. Atención a jóvenes y adultos.",
     foto: "fotos/mirian-oscari.jpg",
     horarios: [],
-    whatsapp: "",
+    whatsapp: "381 401 6650",
     mostrar: true
   },
 
@@ -83,7 +83,7 @@ window.PROFESIONALES = [
     descripcion: "Psicólogo. Especialista en infanto-juvenil.",
     foto: "fotos/nicolas-martin-gomez.jpg",
     horarios: [],
-    whatsapp: "",
+    whatsapp: "381 519 7145",
     mostrar: true
   },
 
@@ -93,7 +93,7 @@ window.PROFESIONALES = [
     descripcion: "Psicóloga · MP4278. Orientación cognitivo conductual. Modalidad online y presencial.",
     foto: "fotos/rocio-pacheco.jpg",
     horarios: [],
-    whatsapp: "",
+    whatsapp: "381 523 0757",
     mostrar: true
   },
 
@@ -103,7 +103,7 @@ window.PROFESIONALES = [
     descripcion: "Psicóloga · MP4278. Turnos virtuales y presenciales. Niños, adolescentes y adultos.",
     foto: "fotos/belen-serrano.jpg",
     horarios: [],
-    whatsapp: "",
+    whatsapp: "381 551 0016",
     mostrar: true
   },
 
@@ -113,7 +113,7 @@ window.PROFESIONALES = [
     descripcion: "Psicóloga · Sexóloga. Sex coach, mediadora. Atención clínica y sexología. Psicoterapia individual. Terapia de pareja. Terapia sexológica.",
     foto: "fotos/lucyla-corbalan.jpg",
     horarios: [],
-    whatsapp: "",
+    whatsapp: "381 589 4702",
     mostrar: true
   },
 
@@ -123,7 +123,7 @@ window.PROFESIONALES = [
     descripcion: "Psicóloga. Orientación cognitivo conductual. Adolescentes, jóvenes y adultos.",
     foto: "fotos/maria-florencia-aragon.jpg",
     horarios: [],
-    whatsapp: "",
+    whatsapp: "381 599 8423",
     mostrar: true
   },
 
@@ -133,7 +133,7 @@ window.PROFESIONALES = [
     descripcion: "Psicóloga · MP2198. Especialista en psicología clínica en niños, adolescentes y adultos. Especialista en salud social y comunitaria.",
     foto: "fotos/ale-lucila-del-carmen.jpg",
     horarios: [],
-    whatsapp: "",
+    whatsapp: "381 528 5145",
     mostrar: true
   },
 
@@ -153,7 +153,7 @@ window.PROFESIONALES = [
     descripcion: "Fonoaudióloga. Diplomatura en autismo. Lenguaje. Estimulación del lenguaje en edades tempranas.",
     foto: "fotos/maria-jose-chasampi.jpg",
     horarios: [],
-    whatsapp: "",
+    whatsapp: "381 512 8620",
     mostrar: true
   },
 
@@ -163,7 +163,7 @@ window.PROFESIONALES = [
     descripcion: "Fonoaudióloga.",
     foto: "fotos/giuliana-rossi.jpg",
     horarios: [],
-    whatsapp: "",
+    whatsapp: "381 575 2035",
     mostrar: true
   },
 
@@ -173,7 +173,7 @@ window.PROFESIONALES = [
     descripcion: "Nutricionista.",
     foto: "fotos/julieta-moreyra.jpg",
     horarios: [],
-    whatsapp: "",
+    whatsapp: "3865 63 9476",
     mostrar: true
   },
 
@@ -183,7 +183,7 @@ window.PROFESIONALES = [
     descripcion: "Fonoaudióloga. Especialista en rehabilitación vestibular y en trastorno del lenguaje en niños.",
     foto: "fotos/cintia-piquard.jpg",
     horarios: [],
-    whatsapp: "",
+    whatsapp: "381 418 1932",
     mostrar: true
   },
 
