@@ -43,7 +43,7 @@ window.PROFESIONALES = [
     descripcion: "Médico homeópata. Diplomatura en obesidad. Reseteo intestinal.",
     foto: "fotos/gabriela-marchese.jpg",
     horarios: [],
-    whatsapp: "381 0000000",
+    whatsapp: "",
     mostrar: true
   },
 
